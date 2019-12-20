@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marks Prediction</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container">
+		<div class="alert alert-warning">
+			<center><h1>Get your Marks Predictions</h1></center>
+		</div>
+		<br>
+		<form method="POST", action="/" class="form-inline">
+			<label> How many hours did you study? &nbsp;&nbsp; </label>
+			<input class = "form-control" type="text" name="number">
+			<button class="btn btn-primary btn-lg"> Get Score </button>
+		</form>
+
+		{% if marks %}
+		<h1 class="text text-success">Your Marks  : {{marks[0][0]}}</h1>
+		{% endif %}
+	</div>
+</body>
+</html>
